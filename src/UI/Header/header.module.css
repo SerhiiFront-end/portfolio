@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+.header {
+    justify-content: center;
+    display: flex;
+    position: sticky;
+    top: 0;
+    background: #1C1C33;
+}
+.navigation {
+    margin: 25px 0;
+    width: 80%;
+}
+.listMenu {
+    justify-content: space-around;
+    display: flex;
+}
+.ListItem {
+    color: #F6F6F8;
+    font-size: 17px;
+    list-style-type: none;
+}
+.LinkItem {
+    text-decoration: none;
+}
