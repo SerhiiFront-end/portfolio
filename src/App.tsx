@@ -1,5 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import "./index.css"
+import Biography from "./pages/BiographyPage"
+import HomePage from "./pages/HomePage"
+import ProjectsPage from "./pages/ProjectsPage"
+import SkillsPage from "./pages/SkillsPage"
+import Footer from "./UI/Footer/Footer"
 import Header from "./UI/Header/Header"
 
 function App() {
@@ -8,12 +13,12 @@ function App() {
 			<BrowserRouter>
 				<Header />
 				<Routes>
-					<Route path='/' element={<h1>h1</h1>}></Route>
-					<Route path='/skills' element={<h1>h1</h1>}></Route>
-					<Route path='/projects' element={<h1>h1</h1>}></Route>
-					<Route path='/biography' element={<h1>h1</h1>}></Route>
+					<Route path='/' element={<HomePage />}></Route>
+					<Route path='/skills' element={<SkillsPage />}></Route>
+					<Route path='/projects' element={<ProjectsPage />}></Route>
+					<Route path='/biography' element={<Biography />}></Route>
 				</Routes>
-				{/* <Footer /> */}
+				<Footer />
 			</BrowserRouter>
 		</div>
 	)
