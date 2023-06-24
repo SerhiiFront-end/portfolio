@@ -1,9 +1,14 @@
 .table {
-	@apply w-full text-center;
+	@apply w-full text-center border-collapse;
+	th,
+	td {
+		border: 2px solid black;
+		padding: 1vw;
+	}
 	tr {
 		@apply mb-5;
 		th {
-			@apply text-xl text-cyan-400;
+			@apply text-sm text-cyan-400 md:text-xl;
 		}
 	}
 }

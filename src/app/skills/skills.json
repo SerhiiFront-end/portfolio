@@ -1,1 +1,5 @@
-[{ "id": 0, "skill": "TipoSkill", "description": "test description" }]
+[
+	{ "id": 0, "skill": "Lua", "description": "Lua description" },
+	{ "id": 1, "skill": "TypeScript", "description": "TypeScript description" },
+	{ "id": 2, "skill": "JavaScript", "description": "JavaScript description" }
+]

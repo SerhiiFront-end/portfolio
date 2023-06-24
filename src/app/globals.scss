@@ -26,6 +26,9 @@ body {
 						@apply ease-linear duration-500 bg-slate-500 rounded-md;
 					}
 				}
+				.activeStyle {
+					@apply bg-slate-500;
+				}
 			}
 		}
 	}
