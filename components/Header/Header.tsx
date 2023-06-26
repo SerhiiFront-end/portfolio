@@ -25,7 +25,9 @@ export default function () {
 							<Link key={el.id} href={el.path}>
 								<li
 									className={
-										activeSegment === el.targetSegment ? 'activeStyle' : ''
+										activeSegment === el.targetSegment
+											? 'activeStyle'
+											: 'nonActiveLink'
 									}
 								>
 									{el.label}

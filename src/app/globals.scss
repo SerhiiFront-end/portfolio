@@ -9,13 +9,13 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	@apply max-w-7xl m-auto bg-gray-900 text-white;
 	header {
-		@apply w-full my-[3vh];
+		@apply w-full my-[3vh] bg-gray-900 sticky top-0;
 		nav {
 			@apply m-auto;
 			ul {
 				@apply flex justify-around;
 				a {
-					@apply text-slate-300 px-[3vh] w-1/4 text-center;
+					@apply text-slate-300 w-1/4 text-center;
 					li {
 						@apply text-2xl;
 						@media (max-width: 768px) {

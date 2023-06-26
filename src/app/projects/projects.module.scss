@@ -1,0 +1,38 @@
+.table {
+	@apply w-full text-center border-collapse;
+	th,
+	td {
+		border: 2px solid black;
+		padding: 1vw;
+		a {
+			@apply text-indigo-700;
+		}
+	}
+	tr {
+		@apply mb-5;
+		.activated {
+			@apply text-blue-950;
+		}
+		.notActivated {
+			@apply text-cyan-400;
+		}
+		th {
+			@apply text-cyan-400 text-sm md:text-xl;
+		}
+	}
+}
+.mainForm {
+	@apply flex justify-between my-10;
+	.textBar {
+		@apply bg-black w-2/12 text-center;
+	}
+	.textarea {
+		@apply bg-black w-1/4 text-center;
+	}
+}
+.button {
+	@apply block m-auto bg-emerald-950 w-full p-5 my-5;
+	&:hover {
+		@apply ease-linear duration-500 bg-slate-500 rounded-md;
+	}
+}
