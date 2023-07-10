@@ -3,7 +3,7 @@ import Template from '../../components/template/template'
 export default function Home() {
 	return (
 		<main>
-			<Template loading={false}>
+			<Template loading={false} left={true}>
 				<p>Welcome to my Front-end Developer Portfolio!</p>
 				<p>
 					Hello, I'm Serhii Kozin, a passionate front-end developer dedicated to

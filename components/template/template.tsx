@@ -5,22 +5,25 @@ import { motion } from 'framer-motion'
 export default function Template({
 	children,
 	loading,
+	left,
 }: {
 	children: React.ReactNode
 	loading: boolean
+	left: boolean
 }) {
+	const value = left ? -300 : 300
 	return (
 		<>
 			<motion.div
 				style={{ height: '100%' }}
-				initial={{ x: 300, opacity: 0 }}
+				initial={{ x: value, opacity: 0 }}
 				animate={{
-					x: loading ? 300 : 0,
+					x: loading ? value : 0,
 					opacity: loading ? 0 : 1,
 				}}
 				transition={{
 					type: 'spring',
-					duration: 0.5,
+					duration: 1.5,
 				}}
 			>
 				{children}

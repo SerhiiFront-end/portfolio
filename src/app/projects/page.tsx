@@ -5,7 +5,7 @@ import styles from './projects.module.scss'
 export default function page() {
 	return (
 		<div>
-			<Template loading={false}>
+			<Template loading={false} left={true}>
 				<table className={styles.table}>
 					<thead>
 						<tr>

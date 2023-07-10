@@ -7,7 +7,7 @@ export default function page() {
 	const router = useRouter()
 	return (
 		<div>
-			<Template loading={false}>
+			<Template loading={false} left={false}>
 				<table className={styles.table}>
 					<thead>
 						<tr>
