@@ -1,8 +1,13 @@
+import { Roboto } from 'next/font/google'
 import Template from '../../components/template/template'
 
+const roboto = Roboto({
+	weight: '400',
+	subsets: ['latin'],
+})
 export default function Home() {
 	return (
-		<main>
+		<main className={roboto.className}>
 			<Template loading={false} left={true}>
 				<p>Welcome to my Front-end Developer Portfolio!</p>
 				<p>
