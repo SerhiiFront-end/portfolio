@@ -9,7 +9,7 @@ export default function page() {
 				<table className={styles.table}>
 					<thead>
 						<tr>
-							<th>Name</th>
+							<th>Name (clicable)</th>
 							<th>Description</th>
 						</tr>
 					</thead>
@@ -17,7 +17,7 @@ export default function page() {
 						{projects.map(el => (
 							<tr key={el.id}>
 								<td className='align-top'>
-									<Link href={'/projects/EventScheduler'}>{el.name}</Link>
+									<Link href={el.link}>{el.name}</Link>
 								</td>
 								<td>{el.description}</td>
 							</tr>

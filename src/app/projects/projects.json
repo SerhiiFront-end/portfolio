@@ -2,6 +2,13 @@
 	{
 		"id": 0,
 		"name": "Event Scheduler (test exercise)",
-		"description": "A standard event planner in the form of a table, which I decided to make to demonstrate my standart skills."
+		"description": "A standard event planner in the form of a table, which I decided to make to demonstrate my standart skills.",
+		"link": "/projects/EventScheduler"
+	},
+	{
+		"id": 1,
+		"name": "Trinity Lua Scripts",
+		"description": "Public with scripts that I created on the Russian market, where I took orders and also put my work in the public domain along with the source code.",
+		"link": "https://vk.com/trinityluascripts"
 	}
 ]
