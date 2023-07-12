@@ -1,9 +1,50 @@
 import { useState } from 'react'
+import EventType from '../../types/eventTable.types'
 import styles from './table.module.scss'
-export default function Table(props: any) {
+export default function Table({
+	array,
+	setData,
+}: {
+	array: EventType[]
+	setData: React.Dispatch<React.SetStateAction<EventType[]>>
+}) {
+	console.log(array)
+
 	const [state, setState] = useState(0)
 	const [reverseElements, setReverseElements] = useState(['↓', '↓', '↓', '↓'])
-
+	const checkCell = (states: number) => {
+		if (states !== state) {
+			setState(states)
+			const updatedArray = [...reverseElements]
+			updatedArray[states] = '↓'
+			setReverseElements(updatedArray)
+			switch (states) {
+				case 0:
+					setData([...array].sort((a, b) => a.name.localeCompare(b.name)))
+					break
+				case 1:
+					setData([...array].sort((a, b) => b.people - a.people))
+					break
+				case 2:
+					setData([...array].sort((a, b) => b.price - a.price))
+					break
+				default:
+					break
+			}
+		} else {
+			setData(array.slice().reverse())
+			if (reverseElements[states] === '↓') {
+				let updatedArray = [...reverseElements]
+				updatedArray[states] = '↑'
+				setReverseElements(updatedArray)
+			} else {
+				let updatedArray = [...reverseElements]
+				updatedArray[states] = '↓'
+				setReverseElements(updatedArray)
+				setReverseElements(updatedArray)
+			}
+		}
+	}
 	return (
 		<table className={styles.table}>
 			<thead>
@@ -36,7 +77,7 @@ export default function Table(props: any) {
 				</tr>
 			</thead>
 			<tbody>
-				{data.map(el => (
+				{array.map(el => (
 					<tr key={el.id}>
 						<td className='align-top w-1/12'>{el.name}</td>
 						<td className='align-top w-1/12'>{el.people}</td>

@@ -1,0 +1,23 @@
+.table {
+	@apply w-full text-center border-collapse;
+	th,
+	td {
+		border: 2px solid black;
+		padding: 1vw;
+		a {
+			@apply text-indigo-700;
+		}
+	}
+	tr {
+		@apply mb-5;
+		.activated {
+			@apply text-blue-950;
+		}
+		.notActivated {
+			@apply text-cyan-400;
+		}
+		th {
+			@apply text-cyan-400 text-sm md:text-xl;
+		}
+	}
+}

@@ -1,98 +1,57 @@
 'use client'
 import { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import Table from '../../../../components/EventSchedulierTable/Table'
 import styles from '../projects.module.scss'
 import defaultData from './testData.json'
 export default function page() {
-	const [reverseElements, setReverseElements] = useState(['↓', '↓', '↓', '↓'])
-	const [state, setState] = useState(0)
+	const [formBar, setformBar] = useState({
+		name: '',
+		price: '',
+		people: '',
+		description: '',
+	})
 	const [data, setData] = useState(defaultData)
-	const checkCell = (states: number) => {
-		if (states !== state) {
-			setState(states)
-			let updatedArray = [...reverseElements]
-			updatedArray[states] = '↓'
-			setReverseElements(updatedArray)
-			switch (states) {
-				case 0:
-					setData([...data].sort((a, b) => a.name.localeCompare(b.name)))
-					break
-				case 1:
-					setData([...data].sort((a, b) => b.people - a.people))
-					break
-				case 2:
-					setData([...data].sort((a, b) => b.price - a.price))
-					break
-				default:
-					break
-			}
-		} else {
-			setData(data.slice().reverse())
-			if (reverseElements[states] === '↓') {
-				let updatedArray = [...reverseElements]
-				updatedArray[states] = '↑'
-				setReverseElements(updatedArray)
-			} else {
-				let updatedArray = [...reverseElements]
-				updatedArray[states] = '↓'
-				setReverseElements(updatedArray)
-				setReverseElements(updatedArray)
-			}
-		}
+	const { register, reset, handleSubmit } = useForm({
+		mode: 'onChange',
+	})
+
+	const createNewData = (formBar: any) => {
+		setData(prev => [
+			{
+				id: prev.length + 1,
+				...formBar,
+			},
+			...prev,
+		])
+		reset()
 	}
 	return (
 		<div>
-			{/* <Table /> */}
-			<table className={styles.table}>
-				<thead>
-					<tr>
-						<th
-							className={state === 0 ? 'activated' : 'notActivated'}
-							onClick={() => {
-								checkCell(0)
-							}}
-						>
-							Name {state === 0 ? reverseElements[0] : ' '}
-						</th>
-						<th
-							className={state === 1 ? 'activated' : 'notActivated'}
-							onClick={() => {
-								checkCell(1)
-							}}
-						>
-							People amount {state === 1 ? reverseElements[1] : ' '}
-						</th>
-						<th
-							className={state === 2 ? 'activated' : 'notActivated'}
-							onClick={() => {
-								checkCell(2)
-							}}
-						>
-							Price {state === 2 ? reverseElements[2] : ' '}
-						</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-				<tbody>
-					{data.map(el => (
-						<tr key={el.id}>
-							<td className='align-top w-1/12'>{el.name}</td>
-							<td className='align-top w-1/12'>{el.people}</td>
-							<td className='align-top w-1/12'>{el.price}</td>
-							<td>{el.description}</td>
-						</tr>
-					))}
-				</tbody>
-			</table>
-			<form className={styles.mainForm}>
-				<input className={styles.textBar} placeholder='Name'></input>
-				<input className={styles.textBar} placeholder='People'></input>
-				<input className={styles.textBar} placeholder='Price'></input>
-				<textarea
-					className={styles.textarea}
+			<Table array={data} setData={setData} />
+			<form className={styles.mainForm} onSubmit={handleSubmit(createNewData)}>
+				<input
+					{...register('name', { required: true })}
+					className={styles.textBar}
+					placeholder='Name'
+				></input>
+				<input
+					{...register('people', { required: true })}
+					className={styles.textBar}
+					placeholder='People'
+				></input>
+				<input
+					{...register('price', { required: true })}
+					className={styles.textBar}
+					placeholder='Price'
+				></input>
+				<input
+					{...register('description', { required: true })}
+					className={styles.textBar}
 					placeholder='Description'
-				></textarea>
+				></input>
+				<button className={styles.button}>Add new record</button>
 			</form>
-			<button className={styles.button}>Add new record</button>
 		</div>
 	)
 }
