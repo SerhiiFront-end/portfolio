@@ -1,39 +1,11 @@
 'use client'
 import { useState } from 'react'
 import styles from '../projects.module.scss'
+import defaultData from './testData.json'
 export default function page() {
 	const [reverseElements, setReverseElements] = useState(['↓', '↓', '↓', '↓'])
 	const [state, setState] = useState(0)
-	const [data, setData] = useState([
-		{
-			id: 0,
-			name: 'test',
-			people: 111,
-			price: 14410,
-			description: 'test description',
-		},
-		{
-			id: 1,
-			name: 'test1',
-			people: 1411,
-			price: 140,
-			description: 'test description1',
-		},
-		{
-			id: 2,
-			name: 'aaa',
-			people: 13,
-			price: 13330,
-			description: 'test description1',
-		},
-		{
-			id: 3,
-			name: 'bbbB',
-			people: 11,
-			price: 0,
-			description: 'test description1',
-		},
-	])
+	const [data, setData] = useState(defaultData)
 	const checkCell = (states: number) => {
 		if (states !== state) {
 			setState(states)
@@ -69,6 +41,7 @@ export default function page() {
 	}
 	return (
 		<div>
+			{/* <Table /> */}
 			<table className={styles.table}>
 				<thead>
 					<tr>

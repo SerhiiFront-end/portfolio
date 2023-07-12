@@ -1,10 +1,5 @@
 [
 	{
-		"id": 0,
-		"skill": "Lua💕",
-		"description": "Lua is a lightweight and versatile programming language known for its simplicity and efficiency. It features a simple procedural syntax, powerful data structures, and supports scripting and embedding in other applications. With dynamic typing and garbage collection, Lua is popular in game development, embedded systems, and scripting tasks. It is cross-platform and extensible through C modules, making it suitable for a wide range of applications."
-	},
-	{
 		"id": 1,
 		"skill": "TypeScript",
 		"description": "Working with functions, types, interfaces, writing optimized and usable code (examples on gitHub)."
@@ -27,7 +22,7 @@
 	{
 		"id": 5,
 		"skill": "SASS / SCSS",
-		"description": "Advanced CSS style writing for large projects, most often using SCSS to collaborate with Code Prettier in Visual Studio Code."
+		"description": "Advanced CSS style writing for large projects, most often using SCSS to collaborate with Code Prettier in Visual Studio Code for small projects."
 	},
 	{
 		"id": 6,
@@ -41,11 +36,21 @@
 	},
 	{
 		"id": 8,
+		"skill": "Express",
+		"description": "Working with the server side and the use of Node JS environment in general. Knowledge of server-side coding and understanding of standard back-end tasks. Use of standard Express library, ability to use npm, yarn package managers."
+	},
+	{
+		"id": 9,
 		"skill": "Git / GitHub",
 		"description": "Ability to use a version control service...Working with repositories, branches, collaborations and project management."
 	},
 	{
-		"id": 9,
+		"id": 10,
+		"skill": "NextJS",
+		"description": "Vercel's frontend cloud gives developers the frameworks, workflows, and infrastructure to build a faster, more personalized Web."
+	},
+	{
+		"id": 11,
 		"skill": "Adaptability",
 		"description": "I consider my main ability to quickly adapt to any task, the ability to quickly perceive new documentation of different libraries/frameworks."
 	}
