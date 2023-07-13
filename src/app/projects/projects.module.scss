@@ -22,16 +22,12 @@
 	}
 }
 .mainForm {
-	@apply flex justify-between my-10;
 	.textBar {
-		@apply bg-black w-2/12 text-center;
-	}
-	.textarea {
-		@apply bg-black w-1/4 text-center;
+		@apply bg-black w-44 text-center;
 	}
 }
 .button {
-	@apply block m-auto bg-emerald-950 w-full p-5 my-5;
+	@apply block m-auto bg-emerald-950 w-36 p-5 my-5;
 	&:hover {
 		@apply ease-linear duration-500 bg-slate-500 rounded-md;
 	}

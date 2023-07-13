@@ -8,8 +8,6 @@ export default function Table({
 	array: EventType[]
 	setData: React.Dispatch<React.SetStateAction<EventType[]>>
 }) {
-	console.log(array)
-
 	const [state, setState] = useState(0)
 	const [reverseElements, setReverseElements] = useState(['↓', '↓', '↓', '↓'])
 	const checkCell = (states: number) => {
