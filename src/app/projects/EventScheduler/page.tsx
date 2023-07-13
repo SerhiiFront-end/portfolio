@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import Table from '../../../../components/EventSchedulierTable/Table'
+import Template from '../../../../components/template/template'
 import styles from '../projects.module.scss'
 import defaultData from './testData.json'
 export default function page() {
@@ -27,7 +28,7 @@ export default function page() {
 		reset()
 	}
 	return (
-		<div>
+		<Template left={true} loading={false}>
 			<Table data={data} setData={setData} />
 			<form className={styles.mainForm} onSubmit={handleSubmit(createNewData)}>
 				<br />
@@ -58,6 +59,6 @@ export default function page() {
 				></input>
 				<button className={styles.button}>Add</button>
 			</form>
-		</div>
+		</Template>
 	)
 }

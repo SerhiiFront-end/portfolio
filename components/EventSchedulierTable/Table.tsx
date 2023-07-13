@@ -75,12 +75,22 @@ export default function Table({
 				</tr>
 			</thead>
 			<tbody>
-				{data.map(el => (
+				{data.map((el, index) => (
 					<tr key={el.id}>
 						<td className='align-top w-1/12'>{el.name}</td>
 						<td className='align-top w-1/12'>{el.people}</td>
 						<td className='align-top w-1/12'>{el.price}</td>
 						<td>{el.description}</td>
+						<td
+							className='hover:ease-linear hover:duration-500 hover:bg-slate-500'
+							onClick={() => {
+								const newArray = [...data]
+								newArray.splice(index, 1)
+								setData(newArray)
+							}}
+						>
+							Delete
+						</td>
 					</tr>
 				))}
 			</tbody>

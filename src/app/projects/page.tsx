@@ -6,8 +6,8 @@ export default function page() {
 	return (
 		<div>
 			<Template loading={false} left={true}>
-				<table className={styles.table}>
-					<thead>
+				<table className={`${styles.table} text-sm md:text-lg`}>
+					<thead className='text-base md:text-xl'>
 						<tr>
 							<th>Name (clicable)</th>
 							<th>Description</th>
@@ -16,7 +16,7 @@ export default function page() {
 					<tbody>
 						{projects.map(el => (
 							<tr key={el.id}>
-								<td className='align-top'>
+								<td className='align-top  md:text-2xl text-xs'>
 									<Link href={el.link}>{el.name}</Link>
 								</td>
 								<td>{el.description}</td>

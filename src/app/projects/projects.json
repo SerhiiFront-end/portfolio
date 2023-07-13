@@ -13,7 +13,7 @@
 	},
 	{
 		"id": 2,
-		"name": "banlist-server",
+		"name": "Banlist-server",
 		"description": "A small application for the Express NodeJS API that I used before in Lua scripts using HTTP requests.",
 		"link": "https://banlist-server-serhiifront-end.vercel.app/banlist/web/1rp"
 	}
