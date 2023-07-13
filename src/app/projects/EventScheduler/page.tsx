@@ -31,28 +31,24 @@ export default function page() {
 			<Table array={data} setData={setData} />
 			<form className={styles.mainForm} onSubmit={handleSubmit(createNewData)}>
 				<br />
-				{/* <label>Name:</label> */}
 				<input
 					{...register('name', { required: true })}
 					className={styles.textBar}
 					placeholder='Name'
 				></input>
 				<br />
-				{/* <label>People</label> */}
 				<input
 					{...register('people', { required: true })}
 					className={styles.textBar}
 					placeholder='People'
 				></input>
 				<br />
-				{/* <label>Price:</label> */}
 				<input
 					{...register('price', { required: true })}
 					className={styles.textBar}
 					placeholder='Price'
 				></input>
 				<br />
-				{/* <label>Description:</label> */}
 				<input
 					{...register('description')}
 					className={styles.textBar}
