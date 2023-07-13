@@ -10,5 +10,11 @@
 		"name": "Trinity Lua Scripts",
 		"description": "Public with scripts that I created on the Russian market, where I took orders and also put my work in the public domain along with the source code.",
 		"link": "https://vk.com/trinityluascripts"
+	},
+	{
+		"id": 2,
+		"name": "banlist-server",
+		"description": "A small application for the Express NodeJS API that I used before in Lua scripts using HTTP requests.",
+		"link": "https://banlist-server-serhiifront-end.vercel.app/banlist/web/1rp"
 	}
 ]
