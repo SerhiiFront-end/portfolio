@@ -2,10 +2,10 @@ import { useState } from 'react'
 import EventType from '../../types/eventTable.types'
 import styles from './table.module.scss'
 export default function Table({
-	array,
+	data,
 	setData,
 }: {
-	array: EventType[]
+	data: EventType[]
 	setData: React.Dispatch<React.SetStateAction<EventType[]>>
 }) {
 	const [state, setState] = useState(0)
@@ -18,19 +18,19 @@ export default function Table({
 			setReverseElements(updatedArray)
 			switch (states) {
 				case 0:
-					setData([...array].sort((a, b) => a.name.localeCompare(b.name)))
+					setData([...data].sort((a, b) => a.name.localeCompare(b.name)))
 					break
 				case 1:
-					setData([...array].sort((a, b) => b.people - a.people))
+					setData([...data].sort((a, b) => b.people - a.people))
 					break
 				case 2:
-					setData([...array].sort((a, b) => b.price - a.price))
+					setData([...data].sort((a, b) => b.price - a.price))
 					break
 				default:
 					break
 			}
 		} else {
-			setData(array.slice().reverse())
+			setData(data.slice().reverse())
 			if (reverseElements[states] === '↓') {
 				let updatedArray = [...reverseElements]
 				updatedArray[states] = '↑'
@@ -75,7 +75,7 @@ export default function Table({
 				</tr>
 			</thead>
 			<tbody>
-				{array.map(el => (
+				{data.map(el => (
 					<tr key={el.id}>
 						<td className='align-top w-1/12'>{el.name}</td>
 						<td className='align-top w-1/12'>{el.people}</td>

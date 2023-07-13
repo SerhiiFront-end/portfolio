@@ -28,7 +28,7 @@ export default function page() {
 	}
 	return (
 		<div>
-			<Table array={data} setData={setData} />
+			<Table data={data} setData={setData} />
 			<form className={styles.mainForm} onSubmit={handleSubmit(createNewData)}>
 				<br />
 				<input
@@ -38,12 +38,14 @@ export default function page() {
 				></input>
 				<br />
 				<input
+					type='number'
 					{...register('people', { required: true })}
 					className={styles.textBar}
 					placeholder='People'
 				></input>
 				<br />
 				<input
+					type='number'
 					{...register('price', { required: true })}
 					className={styles.textBar}
 					placeholder='Price'

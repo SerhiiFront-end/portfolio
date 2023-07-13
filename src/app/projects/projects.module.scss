@@ -23,11 +23,11 @@
 }
 .mainForm {
 	.textBar {
-		@apply bg-black w-44 text-center;
+		@apply bg-black w-44 text-center outline-none p-1;
 	}
 }
 .button {
-	@apply block m-auto bg-emerald-950 w-36 p-5 my-5;
+	@apply block bg-emerald-950 w-44 p-1;
 	&:hover {
 		@apply ease-linear duration-500 bg-slate-500 rounded-md;
 	}
