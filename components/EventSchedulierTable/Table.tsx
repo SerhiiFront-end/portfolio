@@ -8,7 +8,7 @@ export default function Table({
 	data: EventType[]
 	setData: React.Dispatch<React.SetStateAction<EventType[]>>
 }) {
-	const [state, setState] = useState(0)
+	const [state, setState] = useState(7)
 	const [reverseElements, setReverseElements] = useState(['↓', '↓', '↓', '↓'])
 	const checkCell = (states: number) => {
 		if (states !== state) {
@@ -71,7 +71,7 @@ export default function Table({
 					>
 						Price {state === 2 ? reverseElements[2] : ' '}
 					</th>
-					<th>Description</th>
+					<th style={{ cursor: 'auto' }}>Description</th>
 				</tr>
 			</thead>
 			<tbody>
