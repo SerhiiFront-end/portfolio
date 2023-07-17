@@ -56,6 +56,11 @@
 	},
 	{
 		"id": 11,
+		"skill": "MongoDB",
+		"description": "Using a simple mongoose library in NodeJS to manage a NoSQL database MongoDB."
+	},
+	{
+		"id": 12,
 		"skill": "Adaptability",
 		"description": "I consider my main ability to quickly adapt to any task, the ability to quickly perceive new documentation of different libraries/frameworks."
 	}

@@ -14,7 +14,7 @@ body {
 			ul {
 				@apply flex justify-around;
 				a {
-					@apply text-slate-300 w-1/4 text-center;
+					@apply text-slate-300 px-3 text-center;
 					li {
 						@apply text-2xl;
 						@media (max-width: 768px) {
