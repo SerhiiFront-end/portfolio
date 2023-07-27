@@ -41,8 +41,8 @@
 	},
 	{
 		"id": 8,
-		"skill": "Express",
-		"description": "Working with the server side and the use of Node JS environment in general. Knowledge of server-side coding and understanding of standard back-end tasks. Use of standard Express library, ability to use npm, yarn package managers."
+		"skill": "React",
+		"description": "Using standard hooks, writing your own simple hooks, understanding SOLID principles."
 	},
 	{
 		"id": 9,
