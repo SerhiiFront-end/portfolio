@@ -31,6 +31,7 @@ body {
 		}
 	}
 	main {
+		@apply p-2 mt-[10vh];
 		@media (max-width: 768px) {
 			@apply text-[9px];
 		}

@@ -1,6 +1,7 @@
 import { Roboto } from 'next/font/google'
+import Image from 'next/image'
 import Template from '../../components/template/template'
-
+import myStack from './myStack.jpg'
 const roboto = Roboto({
 	weight: '400',
 	subsets: ['latin'],
@@ -8,8 +9,23 @@ const roboto = Roboto({
 export default function Home() {
 	return (
 		<main className={roboto.className}>
+			<div className='flex justify-around'>
+				<h1 className='font-bold md:text-2xl text-xs italic float-left m-auto text-center'>
+					<Template loading={false} left={true}>
+						Welcome to my
+						<br /> UI/UX Developer <br />
+						Portfolio!
+					</Template>
+				</h1>
+				<Template loading={false} left={false}>
+					<Image
+						src={myStack}
+						alt='My stack'
+						className='sm:max-w-xl max-w-[230px] lg:max-w-2xl'
+					/>
+				</Template>
+			</div>
 			<Template loading={false} left={true}>
-				<p>Welcome to my Front-end Developer Portfolio!</p>
 				<p>
 					Hello, I'm Serhii Kozin, a passionate front-end developer dedicated to
 					creating stunning and user-friendly websites. With a keen eye for
