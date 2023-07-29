@@ -17,7 +17,9 @@ export default function page() {
 						{projects.map(el => (
 							<tr key={el.id}>
 								<td className='align-top  md:text-2xl text-xs'>
-									<Link href={el.link}>{el.name}</Link>
+									<Link href={el.link} target={el.newPage ? '_blank' : ''}>
+										{el.name}
+									</Link>
 								</td>
 								<td>{el.description}</td>
 							</tr>

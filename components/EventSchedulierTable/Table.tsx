@@ -39,7 +39,6 @@ export default function Table({
 				let updatedArray = [...reverseElements]
 				updatedArray[states] = '↓'
 				setReverseElements(updatedArray)
-				setReverseElements(updatedArray)
 			}
 		}
 	}
