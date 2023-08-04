@@ -26,8 +26,6 @@ export default function animation({
 	tag: keyof typeof motion
 }) {
 	const Tag = motion[tag] as React.ElementType<MyMotionDivProps>
-	console.log(className)
-
 	return (
 		<Tag
 			className={className}
