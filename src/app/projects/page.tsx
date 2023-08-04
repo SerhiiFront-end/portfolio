@@ -16,7 +16,7 @@ export default function page() {
 					</thead>
 					<tbody>
 						{projects.map(el => (
-							<Anim tag='tr' key={el.id}>
+							<Anim tag={1} key={el.id}>
 								<td className='align-top  md:text-2xl text-xs'>
 									<Link href={el.link} target={el.newPage ? '_blank' : ''}>
 										{el.name}

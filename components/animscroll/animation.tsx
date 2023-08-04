@@ -23,9 +23,9 @@ export default function animation({
 }: {
 	className?: string
 	children: React.ReactNode
-	tag: JSX.IntrinsicElements
+	tag?: number
 }) {
-	const Tag = motion[tag] || motion.div
+	const Tag = tag === 0 ? motion.p : tag === 1 ? motion.tr : motion.div
 	return (
 		<Tag
 			initial='offscreen'

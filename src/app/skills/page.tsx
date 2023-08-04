@@ -14,7 +14,7 @@ export default function page() {
 				</thead>
 				<tbody>
 					{skills.map(el => (
-						<Anim key={el.id} tag='tr'>
+						<Anim key={el.id} tag={1}>
 							<td className='align-top'>{el.skill}</td>
 							<td>{el.description}</td>
 						</Anim>
