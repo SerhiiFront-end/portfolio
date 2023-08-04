@@ -16,7 +16,7 @@ export default function Footer() {
 					<Image src={inlogo} alt='GitHub logo' width={30} height={30} />
 				</a>
 			</div>
-			<div>© Serhii Kozin, 2023 Portfolio</div>
+			<p>© Serhii Kozin, 2023 Portfolio</p>
 		</footer>
 	)
 }
