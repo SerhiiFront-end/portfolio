@@ -1,8 +1,8 @@
 'use client'
-import { motion, Variants } from 'framer-motion'
-
-import React from 'react'
-
+import { MotionProps, Variants, motion } from 'framer-motion'
+interface MyMotionDivProps extends MotionProps {
+	className?: string
+}
 const cardVariants: Variants = {
 	offscreen: {
 		y: 50,
@@ -17,22 +17,24 @@ const cardVariants: Variants = {
 	},
 }
 export default function animation({
-	className,
 	children,
+	className,
 	tag,
 }: {
-	className?: string
 	children: React.ReactNode
-	tag?: number
+	className?: string
+	tag: keyof typeof motion
 }) {
-	const Tag = tag === 0 ? motion.p : tag === 1 ? motion.tr : motion.div
+	const Tag = motion[tag] as React.ElementType<MyMotionDivProps>
+	console.log(className)
+
 	return (
 		<Tag
+			className={className}
 			initial='offscreen'
 			whileInView='onscreen'
 			viewport={{ once: true, amount: 0.8 }}
 			variants={cardVariants}
-			className={className}
 		>
 			{children}
 		</Tag>

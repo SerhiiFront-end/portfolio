@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Anim from '../../../components/animscroll/animation'
+import Anim from '../../../components/animscroll/Anim'
 import Template from '../../../components/template/template'
 import projects from './projects.json'
 import styles from './projects.module.scss'
@@ -16,7 +16,7 @@ export default function page() {
 					</thead>
 					<tbody>
 						{projects.map(el => (
-							<Anim tag={1} key={el.id}>
+							<Anim tag='tr' key={el.id}>
 								<td className='align-top  md:text-2xl text-xs'>
 									<Link href={el.link} target={el.newPage ? '_blank' : ''}>
 										{el.name}

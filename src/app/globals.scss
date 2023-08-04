@@ -41,7 +41,7 @@ body {
 	}
 	footer {
 		@apply relative flex justify-between bg-slate-950 p-[3vh] mt-[8vh] text-xs items-center;
-		div {
+		.footerdiv {
 			@apply flex justify-around;
 			@media (max-width: 768px) {
 				@apply text-[9px];
@@ -49,6 +49,12 @@ body {
 			a {
 				@apply ml-[3vw];
 			}
+		}
+		.rightDiv {
+			@apply text-right;
+		}
+		.footerlink {
+			@apply text-blue-500;
 		}
 	}
 }
