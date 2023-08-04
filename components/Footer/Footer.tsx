@@ -17,6 +17,7 @@ export default function Footer() {
 				</a>
 			</div>
 			<p>© Serhii Kozin, 2023 Portfolio</p>
+			<a href='mailto:aorl9048@gmail.com'>aorl9048@gmail.com</a>
 		</footer>
 	)
 }
