@@ -1,10 +1,10 @@
-import Anim from '../../../components/animscroll/Anim'
-import Template from '../../../components/template/template'
+import Anim from '@/components/animscroll/Anim'
+import Template from '@/components/template/template'
 import skills from './skills.json'
 import styles from './skills.module.scss'
 export default function page() {
 	return (
-		<Template loading={false} left={false}>
+		<Template>
 			<table className={styles.table}>
 				<thead>
 					<tr>

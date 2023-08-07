@@ -1,8 +1,8 @@
 'use client'
+import Table from '@/components/EventSchedulierTable/Table'
+import Template from '@/components/template/template'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import Table from '../../../../components/EventSchedulierTable/Table'
-import Template from '../../../../components/template/template'
 import styles from '../projects.module.scss'
 import defaultData from './testData.json'
 export default function page() {

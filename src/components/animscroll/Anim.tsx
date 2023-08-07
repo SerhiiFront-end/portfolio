@@ -6,12 +6,12 @@ interface MyMotionDivProps extends MotionProps {
 export default function animation({
 	children,
 	className,
-	tag,
+	tag = 'div',
 	isOneTime = true,
 }: {
 	children: React.ReactNode
 	className?: string
-	tag: keyof typeof motion
+	tag?: keyof typeof motion
 	isOneTime?: boolean
 }) {
 	const Tag = motion[tag] as React.ElementType<MyMotionDivProps>

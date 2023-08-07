@@ -4,12 +4,12 @@ import { motion } from 'framer-motion'
 
 export default function Template({
 	children,
-	loading,
-	left,
+	loading = false,
+	left = false,
 }: {
 	children: React.ReactNode
-	loading: boolean
-	left: boolean
+	loading?: boolean
+	left?: boolean
 }) {
 	const value = left ? -300 : 300
 	return (

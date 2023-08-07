@@ -1,6 +1,6 @@
+import Footer from '@/components/Footer/Footer'
+import Header from '@/components/Header/Header'
 import { Montserrat } from 'next/font/google'
-import Footer from '../../components/Footer/Footer'
-import Header from '../../components/Header/Header'
 import './globals.scss'
 export const metadata = {
 	title: 'Code Canvas',
