@@ -4,6 +4,7 @@ import Template from '@/components/template/template'
 import { Roboto } from 'next/font/google'
 import Image from 'next/image'
 import myStack from './myStack.jpg'
+import {Button} from "@/ui/Button";
 const roboto = Roboto({
 	weight: '400',
 	subsets: ['latin'],
