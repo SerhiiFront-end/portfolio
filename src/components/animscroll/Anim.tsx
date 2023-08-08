@@ -1,4 +1,5 @@
 'use client'
+import React from "react";
 import { MotionProps, motion } from 'framer-motion'
 interface MyMotionDivProps extends MotionProps {
 	className?: string

@@ -2,17 +2,17 @@ import Anim from '@/components/animscroll/Anim'
 import Template from '@/components/template/template'
 import Image from 'next/image'
 import CVimg from './CVimg.png'
+import Button from "@/ui/Button";
+
 export default function page() {
-	return (
-		<Template>
-			<Image className='m-auto w-[70%]' src={CVimg} alt='CV' />
-			<Anim isOneTime={false}>
+    return (
+        <Template>
+            <Image className='m-auto w-[70%]' src={CVimg} alt='CV'/>
+            <Anim isOneTime={false}>
 				<a href='/CV_Serhii_Kozin_UI_UX_dev.pdf' download>
-					<button className='w-1/2 block my-3 m-auto md:w-1/5 p-3 bg-slate-700 hover:ease-linear hover:duration-500 hover:bg-slate-500 hover:rounded-md'>
-						Download CV
-					</button>
+					<Button>Download CV</Button>
 				</a>
 			</Anim>
 		</Template>
-	)
+    )
 }
