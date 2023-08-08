@@ -19,5 +19,12 @@
 		"description": "A small application for the Express NodeJS API that I used before in Lua scripts using HTTP requests.",
 		"link": "https://banlist-server-serhiifront-end.vercel.app/banlist/web/1rp",
 		"newPage": true
+	},
+	{
+		"id": 3,
+		"name": "Portfolio",
+		"description": "This is also my project which I developed with the help of many UI libraries and frameworks. (open source on GitHub)",
+		"link": "/",
+		"newPage": false
 	}
 ]

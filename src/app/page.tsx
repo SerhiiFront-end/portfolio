@@ -3,6 +3,7 @@ import {Roboto} from 'next/font/google'
 import Image from 'next/image'
 import paragraphs from '@/app/(root)/parahraphs.json'
 import myStack from './(root)/myStack.jpg'
+import Carousel from "@/components/carousel/Carousel";
 import React from "react";
 import Anim from "@/components/animscroll/Anim"
 
@@ -30,6 +31,7 @@ export default function Home() {
                     />
 				</Template >
 			</div >
+			<Carousel/>
 			<Template left={true}>
 				{paragraphs.map(el => {return (<Anim tag='p'>{el}</Anim >)})}
 			</Template >
