@@ -3,6 +3,7 @@ import Template from '@/components/template/template'
 import Image from 'next/image'
 import CVimg from './CVimg.png'
 import Button from "@/ui/Button";
+import React from "react";
 
 export default function page() {
     return (
