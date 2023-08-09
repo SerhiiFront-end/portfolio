@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { useSelectedLayoutSegment } from 'next/navigation'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './header.module.css'
 const Links = [
 	{
@@ -16,6 +16,12 @@ const Links = [
 const HeaderButton = () => {
 	const [isNavActive, setIsNavActive] = useState(false)
 	const activeSegment = useSelectedLayoutSegment()
+	useEffect(() => {
+		if (isNavActive === true) {
+			setIsNavActive(false)
+		}
+	}, [activeSegment])
+
 	return (
 		<>
 			<button
@@ -28,9 +34,6 @@ const HeaderButton = () => {
 			</button>
 			<ul
 				className={styles.nav__wrapper}
-				onClick={() => {
-					setIsNavActive(false)
-				}}
 				style={
 					isNavActive
 						? {
@@ -46,7 +49,7 @@ const HeaderButton = () => {
 						<Link
 							key={el.id}
 							href={el.path}
-							className='px-3 text-center md:hover:text-gray-500 hover:ease-in hover:duration-200 font-bold'
+							className='px-3 text-center md:hover:text-gray-700 hover:ease-in hover:duration-200 font-bold'
 						>
 							<li
 								className={

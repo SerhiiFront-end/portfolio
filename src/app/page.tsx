@@ -15,7 +15,7 @@ const roboto = Roboto({
 
 export default function Home() {
 	return (
-		<main className={`${roboto.className} p-2 mt-[10vh]  md:text-sm text-xs`}>
+		<main className={`${roboto.className} p-2 md:text-sm text-xs`}>
 			{/* <Parallax pages={4}>
 				<ParallaxLayer offset={0}>
 					<h1>
