@@ -1,40 +1,64 @@
-import Template from '@/components/template/template'
-import {Roboto} from 'next/font/google'
-import Image from 'next/image'
+'use client'
 import paragraphs from '@/app/(root)/parahraphs.json'
+import Anim from '@/components/animscroll/Anim'
+import Carousel from '@/components/carousel/Carousel'
+import Template from '@/components/template/template'
+// import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import { Roboto } from 'next/font/google'
+import Image from 'next/image'
 import myStack from './(root)/myStack.jpg'
-import Carousel from "@/components/carousel/Carousel";
-import React from "react";
-import Anim from "@/components/animscroll/Anim"
 
 const roboto = Roboto({
-    weight:  '400' ,
-    subsets: ['latin'] ,
+	weight: '400',
+	subsets: ['latin'],
 })
 
 export default function Home() {
-    return (
-        <main className={roboto.className}>
-			<div className='flex justify-around'>
-				<h1 className='font-bold md:text-2xl text-xs italic float-left m-auto text-center text-cyan-400'>
-					<Template left={true}>
+	return (
+		<main className={`${roboto.className} p-2 mt-[10vh]  md:text-sm text-xs`}>
+			{/* <Parallax pages={4}>
+				<ParallaxLayer offset={0}>
+					<h1>
 						Welcome to my
 						<br /> UI/UX Developer <br />
 						Portfolio!
-					</Template >
-				</h1 >
-				<Template >
+					</h1>
+				</ParallaxLayer>
+				<ParallaxLayer offset={1}>
+					<h1>
+						Welcome to my
+						<br /> UI/UX Developer <br />
+						Portfolio!
+					</h1>
+				</ParallaxLayer>
+			</Parallax> */}
+
+			<div className='flex items-center justify-center text-center py-5'>
+				<h1 className='font-bold md:text-2xl text-xs italic text-cyan-400 m-auto'>
+					<Template>
+						Welcome to my
+						<br /> UI/UX Developer <br />
+						Portfolio!
+					</Template>
+				</h1>
+				<Template left={true}>
 					<Image
-                        src={myStack}
-                        alt='My stack'
-                        className='sm:max-w-xl max-w-[230px] lg:max-w-2xl'
-                    />
-				</Template >
-			</div >
-			<Carousel/>
+						src={myStack}
+						alt='My stack'
+						className='max-w-full h-auto ml-5'
+					/>
+				</Template>
+			</div>
 			<Template left={true}>
-				{paragraphs.map(el => {return (<Anim tag='p'>{el}</Anim >)})}
-			</Template >
-</main >
-    )
+				<Carousel />
+				{paragraphs.map((el, index) => {
+					return (
+						<Anim tag='p' key={index} className='m-[5vh]'>
+							{el}
+						</Anim>
+					)
+				})}
+			</Template>
+		</main>
+	)
 }

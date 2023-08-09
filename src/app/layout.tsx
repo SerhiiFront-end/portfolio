@@ -1,8 +1,8 @@
 import Footer from '@/components/Footer/Footer'
 import Header from '@/components/Header/Header'
 import { Montserrat } from 'next/font/google'
+import React from 'react'
 import './(root)/globals.scss'
-import React from "react";
 export const metadata = {
 	title: 'Code Canvas',
 	description: 'Site Portfolio, Serhii Kozin',

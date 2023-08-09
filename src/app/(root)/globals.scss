@@ -4,12 +4,9 @@
 * {
 	@apply m-0 p-0 box-border;
 }
-html {
-	scroll-behavior: smooth;
-}
 body {
-	@apply max-w-7xl m-auto bg-gray-900 text-white;
-	header {
+	@apply max-w-7xl m-auto bg-gray-900 text-white flex-col flex;
+	/* header {
 		@apply w-full my-[3vh] bg-gray-900 sticky top-0;
 		nav {
 			@apply m-auto;
@@ -32,18 +29,9 @@ body {
 				}
 			}
 		}
-	}
-	main {
-		@apply p-2 mt-[10vh];
-		@media (max-width: 768px) {
-			@apply text-[9px];
-		}
-		p {
-			@apply m-[5vh];
-		}
-	}
+	} */
 	footer {
-		@apply relative flex justify-between bg-slate-950 p-[3vh] mt-[8vh] text-xs items-center;
+		@apply flex justify-between bg-slate-950 p-[3vh] mt-[8vh] text-xs items-center;
 		.footerdiv {
 			@apply flex justify-around;
 			@media (max-width: 768px) {

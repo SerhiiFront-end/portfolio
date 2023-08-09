@@ -19,7 +19,7 @@ const Carousel = () => {
         >
             {imagesArray.map((el , index) => (
                 <SwiperSlide
-                    key={index}
+                    key={el.id}
                 >
                     <Image
                         sizes="100vw"
