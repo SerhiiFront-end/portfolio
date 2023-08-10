@@ -3,9 +3,11 @@ import paragraphs from '@/app/(root)/parahraphs.json'
 import Anim from '@/components/animscroll/Anim'
 import Carousel from '@/components/carousel/Carousel'
 import Template from '@/components/template/template'
-// import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import Lenis from '@studio-freight/lenis'
+
 import { Roboto } from 'next/font/google'
 import Image from 'next/image'
+import { useEffect } from 'react'
 import myStack from './(root)/myStack.jpg'
 
 const roboto = Roboto({
@@ -14,25 +16,18 @@ const roboto = Roboto({
 })
 
 export default function Home() {
+	useEffect(() => {
+		const lenis = new Lenis()
+
+		function raf(time: any) {
+			lenis.raf(time)
+			requestAnimationFrame(raf)
+		}
+
+		requestAnimationFrame(raf)
+	}, [])
 	return (
 		<main className={`${roboto.className} p-2 md:text-sm text-xs`}>
-			{/* <Parallax pages={4}>
-				<ParallaxLayer offset={0}>
-					<h1>
-						Welcome to my
-						<br /> UI/UX Developer <br />
-						Portfolio!
-					</h1>
-				</ParallaxLayer>
-				<ParallaxLayer offset={1}>
-					<h1>
-						Welcome to my
-						<br /> UI/UX Developer <br />
-						Portfolio!
-					</h1>
-				</ParallaxLayer>
-			</Parallax> */}
-
 			<div className='flex items-center justify-center text-center py-5'>
 				<h1 className='font-bold md:text-2xl text-xs italic text-cyan-400 m-auto'>
 					<Template>

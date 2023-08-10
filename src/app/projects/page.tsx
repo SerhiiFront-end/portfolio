@@ -14,8 +14,8 @@ export default function page() {
 					</tr>
 				</thead>
 				<tbody>
-					{projects.map(el => (
-						<Anim tag='tr'>
+					{projects.map((el, index) => (
+						<Anim tag='tr' key={index}>
 							<td className='align-top  md:text-2xl text-xs'>
 								<Link href={el.link} target={el.newPage ? '_blank' : ''}>
 									{el.name}
