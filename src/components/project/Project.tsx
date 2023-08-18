@@ -29,7 +29,7 @@ export default function Project({
 			</div>
 			<Anim
 				className={`md:text-sm text-xs flex flex-col md:w-3/5 p-3 bg-gray-900 z-10 ${
-					index % 2 === 0 ? 'pl-6' : 'pr-6'
+					index % 2 === 0 ? 'md:pl-6' : 'md:pr-6'
 				} m-auto w-full`}
 			>
 				<h1 className='font-bold text-base md:text-lg text-center text-cyan-400'>
