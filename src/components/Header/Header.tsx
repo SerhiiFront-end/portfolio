@@ -4,7 +4,7 @@ import Link from 'next/link'
 import HeaderButtonMenu from './HeaderButtonMenu'
 export default function () {
 	return (
-		<header className='relative text-slate-300 md:py-5 z-50'>
+		<header className='relative text-slate-300 md:py-5 z-50 border-b border-gray-800'>
 			<div className='py-4 md:flex md:justify-between md:items-center md:py-0 px-[10vw]'>
 				<Link
 					href={'/'}
