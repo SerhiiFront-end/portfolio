@@ -1,10 +1,10 @@
-@media (min-width: 600px) {
+@media (min-width: 768px) {
 	.nav__wrapper {
 		@apply flex;
 	}
 }
 
-@media (max-width: 599px) {
+@media (max-width: 767px) {
 	.nav__wrapper {
 		@apply absolute top-full right-0 left-0 invisible opacity-0 bg-gray-900;
 		transform: translateY(-100%);
@@ -16,7 +16,7 @@
 	@apply ease-in duration-300 hidden px-[5px] border border-white rounded-md text-sm;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 767px) {
 	.nav__toggle {
 		@apply block absolute right-4 top-4;
 	}

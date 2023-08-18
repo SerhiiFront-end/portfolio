@@ -24,7 +24,7 @@ export default function Project({
 				index % 2 === 0 ? '' : 'flex-row-reverse'
 			} `}
 		>
-			<div className=''>
+			<div>
 				<Image src={img} alt={name} width={1200} height={800} />
 			</div>
 			<Anim
