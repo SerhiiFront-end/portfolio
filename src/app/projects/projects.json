@@ -1,7 +1,7 @@
 [
 	{
 		"id": 0,
-		"image": "/projects/eventScheduler.png",
+		"image": "/projects/eventScheduler.webp",
 		"name": "Event Scheduler (test exercise)",
 		"description": "The Event Scheduler is a web application developed using the React library, designed to provide users with an efficient way to manage and organize events in their lives. This scheduler offers an intuitive interface for creating, editing, and deleting events, as well as visualizing schedules over specific time periods. ",
 		"link": "/projects/EventScheduler",
