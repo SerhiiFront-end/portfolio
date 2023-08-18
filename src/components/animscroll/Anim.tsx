@@ -1,6 +1,6 @@
 'use client'
-import React from "react";
 import { MotionProps, motion } from 'framer-motion'
+import React from 'react'
 interface MyMotionDivProps extends MotionProps {
 	className?: string
 }
@@ -16,7 +16,6 @@ export default function animation({
 	isOneTime?: boolean
 }) {
 	const Tag = motion[tag] as React.ElementType<MyMotionDivProps>
-	// const isOneTimeAnim
 	return (
 		<Tag
 			className={className}

@@ -1,27 +1,31 @@
 [
 	{
 		"id": 0,
+		"image": "/projects/eventScheduler.png",
 		"name": "Event Scheduler (test exercise)",
-		"description": "A standard event planner in the form of a table, which I decided to make to demonstrate my standart skills.",
+		"description": "The Event Scheduler is a web application developed using the React library, designed to provide users with an efficient way to manage and organize events in their lives. This scheduler offers an intuitive interface for creating, editing, and deleting events, as well as visualizing schedules over specific time periods. ",
 		"link": "/projects/EventScheduler",
 		"newPage": false
 	},
 	{
 		"id": 1,
+		"image": "/projects/trinityScripts.png",
 		"name": "Trinity Lua Scripts",
-		"description": "Public with scripts that I created on the Russian market, where I took orders and also put my work in the public domain along with the source code.",
+		"description": "Public with scripts that I created on the Russian market, where I took orders and also put my work in the public domain along with the source code. Since its founding in January 2022, my community has been dedicated to exploring the limitless possibilities of Lua scripting. The community was closed in 2023 in June.",
 		"link": "https://vk.com/trinityluascripts",
 		"newPage": true
 	},
 	{
 		"id": 2,
+		"image": "/projects/banlist.png",
 		"name": "Banlist-server",
-		"description": "A small application for the Express NodeJS API that I used before in Lua scripts using HTTP requests.",
+		"description": "Api endpoint for my lua script that allows taking information from a foreign site using puppenter library for browser emulation, writing data to mongobd. The script was written in August 2022 on a private order.",
 		"link": "https://banlist-server-serhiifront-end.vercel.app/banlist/web/1rp",
 		"newPage": true
 	},
 	{
 		"id": 3,
+		"image": "/projects/portfolio.png",
 		"name": "Portfolio",
 		"description": "This is also my project which I developed with the help of many UI libraries and frameworks. (open source on GitHub)",
 		"link": "/",

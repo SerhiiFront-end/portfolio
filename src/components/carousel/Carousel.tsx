@@ -1,34 +1,31 @@
-"use client"
-import {Swiper , SwiperSlide} from 'swiper/react';
-import {Navigation , Pagination} from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import Image from "next/image";
-import {imagesArray} from "./images";
-
+'use client'
+import { motion } from 'framer-motion'
+// import { motion, useScroll } from 'framer-motion'
+import Image from 'next/image'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import { Navigation, Pagination } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { imagesArray } from './images'
 const Carousel = () => {
-    return (
-        <Swiper
-            pagination={{
-                type: 'fraction' ,
-            }}
-            navigation={true}
-            modules={[Pagination , Navigation]}
-            className='my-[20vh]'
-        >
-            {imagesArray.map((el , index) => (
-                <SwiperSlide
-                    key={el.id}
-                >
-                    <Image
-                        sizes="100vw"
-                        src={el.img}
-                        alt={el.alt}
-                    />
-            </SwiperSlide >))}
-      </Swiper >
-    );
-};
+	return (
+		<motion.div>
+			<Swiper
+				pagination={{
+					type: 'bullets',
+				}}
+				navigation={true}
+				modules={[Pagination, Navigation]}
+			>
+				{imagesArray.map((el, index) => (
+					<SwiperSlide key={el.id}>
+						<Image src={el.img} alt={el.alt} />
+					</SwiperSlide>
+				))}
+			</Swiper>
+		</motion.div>
+	)
+}
 
-export default Carousel;
+export default Carousel
